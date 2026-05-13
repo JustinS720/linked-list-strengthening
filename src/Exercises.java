@@ -12,7 +12,18 @@ public class Exercises {
      * @return the length of the list
      */
     public static int length(ListNode head) {
-        return -1;
+        ListNode current = head;
+        int count = 0;
+
+        if (current == null) {
+            return 0;
+        }
+
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
     }
 
     /**
@@ -29,7 +40,8 @@ public class Exercises {
      * @return the new head of the linked list
      */
     public static ListNode prepend(ListNode head, int toAdd) {
-        return null;
+        ListNode newHead = new ListNode(toAdd, head);
+        return newHead;
     }
 
     /**
